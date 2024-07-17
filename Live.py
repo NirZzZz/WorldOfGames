@@ -29,7 +29,7 @@ def get_user_input(prompt, min_val, max_val):
             print(f"Invalid input, please enter a number between {min_val} and {max_val}.")
 
 
-def load_game():
+def load_game(name):
     game_prompt = """
 Please choose a game to play:
 1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
@@ -48,4 +48,4 @@ Please choose game difficulty (1 to 5)
     if not win:
         pass
     else:
-        add_score(game_difficulty)
+        add_score(name, game_difficulty)
