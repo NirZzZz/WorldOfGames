@@ -1,7 +1,7 @@
 from GuessGame import play as guess_game
 from MemoryGame import play as memory_game
 from CurrencyRoulette import play as currency_roulette
-from Score import add_score
+from MainScores import add_score, init_db
 
 
 def welcome():
@@ -48,4 +48,5 @@ Please choose game difficulty (1 to 5)
     if not win:
         pass
     else:
+        init_db()
         add_score(name, game_difficulty)
