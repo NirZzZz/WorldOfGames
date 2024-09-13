@@ -1,0 +1,5 @@
+services:
+  wog:
+    image: zeiran/world-of-games:latest
+    ports:
+      - 3000:3000

@@ -22,12 +22,11 @@ def test_scores_service(app_url):
         print(f"An error occurred: {e} in {name}")
         return False
     finally:
-        # Close the browser
         driver.quit()
 
 
 def main_function():
-    result = test_scores_service()
+    result = test_scores_service(url)
     if result:
         return 0
     else:

@@ -40,7 +40,7 @@ Please choose a game to play:
 Please choose game difficulty (1 to 5)
 """
     chosen_game = get_user_input(game_prompt, 1, 3)
-    print(f"You chose to play {games[chosen_game].get("name")}, enjoy!")
+    print(f"You chose to play {games[chosen_game].get('name')}, enjoy!")
     game_difficulty = get_user_input(difficulty_prompt, 1, 5)
     print(f"You chose difficulty {game_difficulty}.")
     game_play = games[chosen_game].get("game")
