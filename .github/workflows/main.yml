@@ -34,7 +34,7 @@ jobs:
       run: |
         docker run -d --name test_container \
           -p 8777:8777 \
-          -v $GITHUB_WORKSPACE/$SCORES_FILE:/scores.db \
+          -v $GITHUB_WORKSPACE/$SCORES_FILE:/app/scores.db \
           $DOCKER_IMAGE
 
     - name: Install dependencies
