@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DOCKER_IMAGE: your-docker-image-name
-      SCORES_FILE: Scores.txt
+      DOCKER_IMAGE: world-of-games
+      SCORES_FILE: Scores.db
 
     steps:
     - name: Checkout code
