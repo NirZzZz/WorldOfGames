@@ -1,4 +1,4 @@
-name: WorldOfGames CI/CD
+name: WorldOfGames CI Pipeline
 
 on:
   push:
