@@ -40,7 +40,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        apt install pipx
+        sudo apt-get install pipx
         pipx install -r requirements.txt
 
     - name: Run end-to-end tests
