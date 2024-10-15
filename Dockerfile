@@ -1,4 +1,4 @@
-FROM python:3-alpine3.14
+FROM python:3.9-slim
 WORKDIR /WoG
 COPY . /WoG
 RUN pip install --upgrade pip && pip install -r requirements.txt
