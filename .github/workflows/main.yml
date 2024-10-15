@@ -30,6 +30,11 @@ jobs:
       run: |
         docker build -t $DOCKER_IMAGE .
 
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
     - name: Run Docker container
       run: |
         docker run -d --name test_container \
@@ -40,9 +45,8 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install python3
-        sudo apt-get install pip3
-        pip3 install -r requirements.txt
+        sudo apt-get install pip
+        pip install -r requirements.txt
 
     - name: Run end-to-end tests
       run: |
