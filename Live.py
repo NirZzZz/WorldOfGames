@@ -1,12 +1,19 @@
+import os
 from GuessGame import play as guess_game
 from MemoryGame import play as memory_game
 from CurrencyRoulette import play as currency_roulette
 from MainScores import add_score, init_db
 
 
+def screen_cleaner():
+    os.system("cls" if os.name == "nt" else "clear")
+    load_game(name=welcome())
+
+
 def welcome():
-    name = input("please enter your name: ")
-    print(f"Hello {name} and welcome to the World of Games (WoG). Here you can find many cool games to play.")
+    name = validate_input("please enter your name: ")
+    print(f"Hello {name} and welcome to the World of Games (WoG). Here you can find many cool games to play. Type "
+          f"'exit' for start-over")
     return name
 
 
@@ -17,10 +24,18 @@ games = {
 }
 
 
+def validate_input(prompt=""):
+    val = input(prompt)
+    if val == "exit":
+        screen_cleaner()
+    else:
+        return val
+
+
 def get_user_input(prompt, min_val, max_val):
     while True:
         try:
-            num = int(input(prompt))
+            num = int(validate_input(prompt))
             if min_val <= num <= max_val:
                 return num
             else:

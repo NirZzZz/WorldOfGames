@@ -9,7 +9,7 @@ def generate_sequence(_difficulty):
         seq.append(num)
     print(seq, end="")
     sleep(0.7)
-    print("\r\t")
+    print("\r      ")
     return seq
 
 
